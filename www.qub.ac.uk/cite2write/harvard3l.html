@@ -425,23 +425,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div id="6" class="panel"><h2 class="title">Book Chapter<br></h2>
 
                     <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
-
-                    <p class="box yearbox"> Year of publication<br><input type="text" class="year"></p>
-
                     <p class="box titlebox"> Title<br><input type="text" class="title"></p>
-
-                    <p class="box editionbox"> Edition<br><input type="text" class="edition"></p>
-
-                    <p class="box"> Pages<br><input type="text" class="place"></p>
-
-                    <p class="box"> Name of publisher<br><input type="text" class="pubname"></p></div>
+                    <p class="box yearbox"> Year of publication<br><input type="text" class="year"></p>
+                    <p class="box editionbox">Publication<br><input type="text" class="edition"></p>
+                  
+                
+                </div>
                 <div id="7" class="panel"><h2 class="title">Dissertation<br></h2>
 
                     <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
                     <p class="box titlebox"> Title<br><input type="text" class="title"></p>
                     <p class="box yearbox"> Year of publication<br><input type="text" class="year"></p>
                     <p class="box editionbox"> Institute/University<br><input type="text" class="edition"></p>
-                    <p class="box"> Type od Dissertation<br><input type="text" class="pubname"></p></div>
+                    <p class="box"> Type of Dissertation<br><input type="text" class="pubname"></p></div>
 
 
                 <div id="8" class="panel"><h2 class="title">Report<br></h2>
@@ -514,7 +510,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             b = a.author+  ". <i>"  + a.title + ". </i>" + a.edition + ", " + a.year +"." 
             break;
         case "6":
-            b = a.author + ", \"" + a.title + ".\" " + a.pubname + ", " + a.edition + ", " + a.year +"."
+            b = a.author + ", \"" + a.title + ".\" " + a.edition + " (" + a.year +")."
             break;
         case "7":
         b = a.author + ", \"" + a.title + ".\" " + a.pubname + ", " + a.edition + ", " + a.year +"."
