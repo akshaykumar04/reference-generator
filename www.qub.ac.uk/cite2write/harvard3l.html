@@ -364,7 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 below.</b> </span></p>
             <hr>
             <div class="coda-slider" id="slide">
-                <div id="1" class="panel"><span id="isbnbuttonspan"><button id="isbnbutton">ISBN Search</button></span><h2 style="margin-left:110px ;" class="title">Book</h2>
+                <div id="1" class="panel"><span id="isbnbuttonspan"><button id="isbnbutton">ISBN Search</button></span><h2 style="margin-left:110px ;" class="title">Research/Magazines/Workshop</h2>
 
 
 
@@ -376,10 +376,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <p class="box editionbox"> Edition<br><input type="text" class="edition"></p>
 
-                    <p class="box"> Place of publication<br><input type="text" class="place"></p>
+                    <p class="box"> Pages<br><input type="text" class="place"></p>
 
                     <p class="box"> Name of publisher<br><input type="text" class="pubname"></p></div>
-                <div id="2" class="panel"><h2 class="title">Electronic Book</h2>
+                <div id="2" class="panel"><h2 class="title">Conference Papers</h2>
 
                     <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
 
@@ -392,7 +392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="box urlbox"> Available at: <br><input type="text" class="url"></p>
 
                     <p class="box datebox"> Accessed: <br><input type="text" class="accessed"></p></div>
-                <div id="3" class="panel"><h2 class="title">Chapter from Book<br></h2>
+                <div id="3" class="panel"><h2 class="title">Symposium Papers<br></h2>
 
                     <p class="box authorbox"> Author(s) of Chapter<br><input type="text" class="chapterauthor"></p>
 
@@ -409,7 +409,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="box"> Name of Publisher <br><input type="text" class="pubname"></p>
 
                     <p class="box pagebox"> Page Reference<br><input type="text" class="page"></p></div>
-                <div id="4" class="panel"><h2 class="title">Journal Article<br></h2>
+                <div id="4" class="panel"><h2 class="title">Workshop Papers<br></h2>
 
                     <p class="box authorbox"> Author(s) of Article<br><input type="text" class="author"></p>
 
@@ -424,7 +424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="box"> Issue Number<br><input type="text" class="issuenum"></p>
 
                     <p class="box pagebox"> Page Reference<br><input type="text" class="page"></p></div>
-                <div id="5" class="panel"><h2 class="title">E-Journal Article<br></h2>
+                <div id="5" class="panel"><h2 class="title">Books<br></h2>
 
                     <p class="box authorbox"> Author(s) of Article<br><input type="text" class="author"></p>
 
@@ -443,7 +443,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <p class="box urlbox"> Available At: <br><input type="text" class="url"></p>
 
                     <p class="box datebox"> Accessed: <br><input type="text" class="accessed"></p></div>
-                <div id="6" class="panel"><h2 class="title">Website<br></h2>
+                <div id="6" class="panel"><h2 class="title">Book Chapter<br></h2>
 
                     <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
 
@@ -527,7 +527,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     "" == a.year && (a.year = "n.d.");
     switch (getCurrentTab("index")) {
         case "1":
-            b = "" == a.edition ? a.author + " (" + a.year + ") <i>" + a.title + "</i>, " + a.place + ": " + a.pubname + "." : a.author + " (" + a.year + ") <i>" + a.title + "</i>, " + a.edition + " edn., " + a.place + ": " + a.pubname + ".";
+            b = "" == a.edition ? a.author + "." + "a.title"+ ", " + a.place + ": " + a.pubname + "." : a.author + ". " + "\"" + a.title + "." + "\"" +" <i>" + a.pubname + "</i>, " + a.edition + " (" + a.year + ")" + ": " + a.place + ".";
             break;
         case "2":
             b = "" == a.collection ? a.author + " (" + a.year + ") <i>" + a.title + ". </i>[Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ")." : a.author + " (" + a.year + ") <i>" + a.title + ". " + a.collection + "</i> [Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ").";
