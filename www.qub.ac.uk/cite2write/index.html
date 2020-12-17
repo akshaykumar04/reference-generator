@@ -1,0 +1,563 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.qub.ac.uk/cite2write/harvard3l.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 18:54:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9BRBF');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords"
+          content="cite2write, academic reference, referencing, citation, citing, plagiarism, Harvard, MHRA, OSCOLA, Vancouver, footnotes">
+    <meta name="description" content="Academic Referencing">
+    <meta name="author" content="Tim Crawford">
+    <!-- <meta name="copyright" content="Learning Development Service, 2012"> -->
+    <title>Reference Generator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="jquery.qtip.min.css"/>
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.8.22.custom.css"/>
+	<link rel="stylesheet" type="text/css" href="coda-slider.css"/>
+    <link rel="stylesheet" href="../../maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="../../ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="../../ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+    <script src="../../ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript" src="Scripts/reference-generator-harvard-isbn-doc.js"></script>
+    <!--scripts.js contains a number of jQuery plugins combined. These are qTip2, jQuery UI Touch Punch, Coda Slider 3, and Downloadify. For license information and more info, view the source of scripts.js -->
+    <script type="text/javascript" src="Scripts/scripts.js"></script>
+    <style type="text/css">
+	#content {
+        overflow: hidden;
+    }
+
+    div.radio {
+        margin: 0 auto;
+    }
+
+    #content div.radio .ui-button {
+        width: 25%;
+    }
+
+    div.ui-tabs {
+        overflow: hidden;
+    }
+
+	#attribution{
+		font-size: 12px;
+		padding: 15px;
+		background-color:#eee;
+		color:black;
+		
+	
+	}
+	
+	#attribution img{
+		
+		
+	
+	}
+	
+    #content ul a.tab {
+        font-size: 90%;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    #content ul a.tab:hover {
+        text-decoration: none;
+    }
+
+    #content ul li.ui-tabs-selected a.tab {
+        color: #000;
+    }
+
+    html {
+        overflow-y: scroll;
+    }
+
+    p.box {
+        font-size: 20px;
+        width: 565px;
+        color: #fff;
+        background-color: #E4002B;
+        padding: 15px;
+        padding-top: 10px;
+        float: left;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    p.box:hover {
+        box-shadow: 0 0 4px 4px #ccc;
+    }
+
+    .panel h2 {
+        margin-right: 50px;
+        text-align: center;
+    }
+
+    .nav {
+        margin: 0;
+    }
+	
+	.navlist{
+		margin: 0;
+	}
+
+
+    .navlist li {
+        width: 21.5%;
+        margin: 0;
+        margin-top: 5px;
+        padding: 5px;
+        padding-top: 12px;
+        padding-bottom: 0;
+        background-color: #E4002B;
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        height: 30px;
+    }
+
+    .panel input {
+        margin-top: 5px;
+        height: 25px;
+        font-size: 20px;
+        width: 557px;
+    }
+
+    #referencelistdiv {
+        margin-top: 0;
+        background-color: #b6b6b6;
+        margin-bottom: 15px;
+    }
+
+        #referencelist {
+            margin-top:0;
+            background-color:rgb(240,240,240);
+        }
+
+    .panel {
+        display: none;
+    }
+
+    #buttondiv {
+        font-size: 12px;
+        height: 50px;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #buttondiv #submit {
+        margin-right: 35px;
+        margin-bottom: 15px;
+        float: right;
+    }
+
+    #buttondiv #clear {
+        margin-left: 35px;
+        margin-bottom: 15px;
+        float: left;
+    }
+
+    #buttondiv #undo {
+        margin-right: 3px;
+        float: right;
+    }
+
+    .coda-slider {
+        margin: 0;
+    }
+
+    #referencelist {
+        margin-left: 0;
+        min-height: 0;
+        list-style: none;
+        margin-bottom: 25px;
+    }
+
+    #referencelist li {
+        list-style: none;
+        width: 91.2%;
+        padding: 10px;
+        background-color: #fff;
+        overflow: hidden;
+        margin-top: 10px;
+    }
+
+    #referencelist li div.del {
+        float: right;
+        margin-top: 0;
+    }
+
+    #referencelist li div button {
+        font-size: 10px;
+        display: inline-block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+        .reflisttext {
+
+            width:500px;
+
+        }
+
+    #referencelist li div.reflistitem {
+        float: left;
+    }
+
+    .panel-wrapper {
+        padding-top: 0 !important;
+    }
+
+    .coda-slider-wrapper {
+        padding-top: 0 !important;
+    }
+
+    #bottombuttondiv {
+        display: inline;
+        font-size: 12px;
+        min-height: 40px;
+        width: 100%;
+        margin-top: 15px;
+        margin-right: 35px;
+        margin-bottom: 10px;
+    }
+
+    #isbnbuttonspan{
+        position:relative;
+        float:right;
+
+
+        margin-right:50px !important;
+
+        font-size:10px !important ;
+    }
+
+    #bottombuttondiv button {
+        float: right;
+        margin-bottom: 15px;
+        margin-right: 35px;
+    }
+
+    #outputdiv {
+        box-shadow: 10px 10px 10px 2px #999;
+        background-color: #fff;
+        font-family: serif;
+        width: 89%;
+        margin-left: 39px;
+        margin-right: 35px;
+        margin-bottom: 25px;
+        display: inline-block;
+        position: relative;
+    }
+
+    #outputdiv p {
+        padding: 35px;
+        margin: 0;
+        font-size: 120%;
+        line-height: 140%;
+    }
+
+    #outputdiv #flashbuttondiv {
+        cursor: pointer;
+        font-size: 22px;
+        position: absolute;
+        left: 94%;
+        top: 6px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9BRBF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container">
+    <div id="header"><a href="home.html"><img class="logo"
+                                                                              src="images/logo.png"
+                                                                              alt="cite2write logo"><img class="logo2"
+                                                                                                         src="dev/logoText.png"
+                                                                                                         alt="Referencing made easy..."></a>
+        <a href="http://www.qub.ac.uk/"><img class="logo3" src="images/New%20Brand.jpg" /></a></div>
+    <div id="topnavigation">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="evaluation.html">Evaluation</a></li>
+        </ul>
+        <div id="topnavigation2"><a href="sitemap.html">Site Map</a> | <a
+                href="help.html">Help</a></div>
+    </div>
+    <div id="main">
+        <div id="menu">
+            <div id="navigation"><p><a href="home.html">Home</a></p>
+
+                <p><a href="introduction.html">Introduction</a></p>
+
+                <p><a href="harvard.html" class="active">Harvard Referencing</a></p>
+
+                <p class="subnav"><a href="harvard.html">Introduction</a></p>
+
+                <p class="subnav"><a href="harvard2.html">In-text Citations</a></p>
+
+                <p class="subnavActive"><a href="harvard3.html">Reference List /
+                    Bibliography</a></p>
+
+                <p class="subnav2"><a href="harvard3b.html">Formatting</a></p>
+
+                <p class="subnav2"><a href="harvard3c.html">Book</a></p>
+
+                <p class="subnav2"><a href="harvard3d.html">Electronic book</a></p>
+
+                <p class="subnav2"><a href="harvard3e.html">Chapter from book</a></p>
+
+                <p class="subnav2"><a href="harvard3f.html">Journal article</a></p>
+
+                <p class="subnav2"><a href="harvard3g.html">Electronic journal
+                    article</a></p>
+
+                <p class="subnav2"><a href="harvard3h.html">Website</a></p>
+
+                <p class="subnav2"><a href="harvard3i.html">Newspaper article</a></p>
+
+                <p class="subnav2"><a href="harvard3j.html">Report</a></p>
+
+                <p class="subnav2"><a href="harvard3k.html">Quiz</a></p>
+
+                <p class="subnav2active">Reference generator</p>
+
+                <p class="subnav"><a href="harvard4.html">Resources</a></p>
+
+                <p><a href="vancouver.html">Vancouver Referencing</a></p>
+
+                <p><a href="mhra.html">MHRA Referencing</a></p>
+
+                <p><a href="oscola.html">OSCOLA Referencing</a></p>
+                <p><a href="other.html">Other Systems </a></p>
+
+          <p><a href="glossary.html">Glossary</a></p></div>
+				<div id=attribution ><span>ISBN search is powered by <a href="http://books.google.com/">Google Books</a> and <a href="http://openlibrary.org/">Open Library</a></span></div>
+        </div>
+		
+        <div id="content">
+            <div id="content_top"><h1>Reference Generator</h1></div>
+                <p><span id="instructions"> Choose a type of source, enter the details into the boxes provided and then click the "Generate
+                Reference" button to generate a correctly formatted reference.
+                When you are ready to create your list, click "Create Sorted List". You can copy and paste this list, or you can download the list by clicking the icon at the top right of the list.
+                <br>
+              
+                <b>Please note that this tool may not work correctly on older browsers, such as Internet Explorer 7 and
+                below.</b> </span></p>
+            <hr>
+            <div class="coda-slider" id="slide">
+                <div id="1" class="panel"><span id="isbnbuttonspan"><button id="isbnbutton">ISBN Search</button></span><h2 style="margin-left:110px ;" class="title">Book</h2>
+
+
+
+                    <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
+
+                    <p class="box yearbox"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title<br><input type="text" class="title"></p>
+
+                    <p class="box editionbox"> Edition<br><input type="text" class="edition"></p>
+
+                    <p class="box"> Place of publication<br><input type="text" class="place"></p>
+
+                    <p class="box"> Name of publisher<br><input type="text" class="pubname"></p></div>
+                <div id="2" class="panel"><h2 class="title">Electronic Book</h2>
+
+                    <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title<br><input type="text" class="title"></p>
+
+                    <p class="box ebox"> E-book Collection<br><input type="text" class="collection"></p>
+
+                    <p class="box urlbox"> Available at: <br><input type="text" class="url"></p>
+
+                    <p class="box datebox"> Accessed: <br><input type="text" class="accessed"></p></div>
+                <div id="3" class="panel"><h2 class="title">Chapter from Book<br></h2>
+
+                    <p class="box authorbox"> Author(s) of Chapter<br><input type="text" class="chapterauthor"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box"> Title of Chapter<br><input type="text" class="chapter"></p>
+
+                    <p class="box authorbox"> Author(s)/Editor(s) of Book<br><input type="text" class="bookauthor"></p>
+
+                    <p class="box titlebox"> Title of Book <br><input type="text" class="title"></p>
+
+                    <p class="box"> Place of publication <br><input type="text" class="place"></p>
+
+                    <p class="box"> Name of Publisher <br><input type="text" class="pubname"></p>
+
+                    <p class="box pagebox"> Page Reference<br><input type="text" class="page"></p></div>
+                <div id="4" class="panel"><h2 class="title">Journal Article<br></h2>
+
+                    <p class="box authorbox"> Author(s) of Article<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title of Article<br><input type="text" class="title"></p>
+
+                    <p class="box jtitlebox"> Title of Journal<br><input type="text" class="journaltitle"></p>
+
+                    <p class="box"> Volume<br><input type="text" class="volume"></p>
+
+                    <p class="box"> Issue Number<br><input type="text" class="issuenum"></p>
+
+                    <p class="box pagebox"> Page Reference<br><input type="text" class="page"></p></div>
+                <div id="5" class="panel"><h2 class="title">E-Journal Article<br></h2>
+
+                    <p class="box authorbox"> Author(s) of Article<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title of Article<br><input type="text" class="title"></p>
+
+                    <p class="box"> Title of Journal<br><input type="text" class="journaltitle"></p>
+
+                    <p class="box"> Volume <br><input type="text" class="volume"></p>
+
+                    <p class="box"> Issue Number <br><input type="text" class="issuenum"></p>
+
+                    <p class="box pagebox"> Page Reference<br><input type="text" class="page"></p>
+
+                    <p class="box urlbox"> Available At: <br><input type="text" class="url"></p>
+
+                    <p class="box datebox"> Accessed: <br><input type="text" class="accessed"></p></div>
+                <div id="6" class="panel"><h2 class="title">Website<br></h2>
+
+                    <p class="box authorbox"> Author(s)<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year webpage was last updated<br><input type="text" class="lastupdated"></p>
+
+                    <p class="box titlebox"> Title<br><input type="text" class="title"></p>
+
+                    <p class="box urlbox"> Available At: <br><input type="text" class="url"></p>
+
+                    <p class="box datebox"> Accessed: <br><input type="text" class="accessed"></p></div>
+                <div id="7" class="panel"><h2 class="title">Newspaper Article<br></h2>
+
+                    <p class="box authorbox"> Author(s) of Article<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title of Article<br><input type="text" class="title"></p>
+
+                    <p class="box jtitlebox"> Title of Newspaper<br><input type="text" class="newspapertitle"></p>
+
+                    <p class="box daybox"> Day<br><input type="text" class="day"></p>
+
+                    <p class="box monthbox"> Month <br><input type="text" class="month"></p>
+
+                    <p class="box singlepagebox"> Page Reference<br><input type="text" class="page"></p></div>
+                <div id="8" class="panel"><h2 class="title">Report<br></h2>
+
+                    <p class="box authorbox"> Author / Organisation<br><input type="text" class="author"></p>
+
+                    <p class="box"> Year of publication<br><input type="text" class="year"></p>
+
+                    <p class="box titlebox"> Title<br><input type="text" class="title"></p>
+
+                    <p class="box"> Place of publication<br><input type="text" class="place"></p>
+
+                    <p class="box"> Name of publisher <br><input type="text" class="pubname"></p></div>
+            </div>
+            <div id="buttondiv">
+                <button id="submit">Generate Reference</button>
+                <button id="undo">Undo Delete</button>
+                <button id="clear">Clear Form</button>
+            </div>
+            <div id="referencelistdiv">
+                <ul id="referencelist"></ul>
+            </div>
+            <div id="bottombuttondiv">
+                <button id="output">Create Sorted List</button>
+            </div>
+            <div>
+                <div id="outputdiv"><p id="outputtext"></p>
+
+                    <div id="flashbuttondiv"><i class="fa fa-download"></i></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="dialog-form" title="Enter ISBN (10 or 13)">
+        <p style="font-size: 11px; margin-bottom: 40px;">Please note that this feature is experimental and may give incorrect or incomplete results. <b>Please make sure all of the fields are correctly formatted.</b> </p>
+                <label for="isbnbox">ISBN</label>
+                <input type="text" name="isbn" id="isbnbox" style="background:white url(../../developers.google.com/books/images/google_watermark.gif) no-repeat;"   onkeyup='this.style.background=(this.value=="" ? "white url(https://developers.google.com/books/images/google_watermark.gif) no-repeat" : "white");' class="text ui-widget-content ui-corner-all" />
+                <span id="pulser"></span>
+
+    </div>
+
+
+    <div id="footer">
+        <div id="bottombar"></div>
+        <div id="bottomlinks"><a href="introduction.html">Introduction</a> | <a
+                href="harvard.html">Harvard Referencing</a> | <a
+                href="vancouver.html">Vancouver Referencing</a> | <a
+                href="mhra.html">MHRA Referencing</a> | <a
+                href="oscola.html">OSCOLA Referencing</a> | <a href="other.html">Other Systems</a> | <a
+                href="glossary.html">Glossary</a></div>
+        <div id="copyright"> © 2017</div>
+    </div>
+</div>
+<script type="text/javascript">function getReference(a) {
+    var b = "error";
+    "" == a.year && (a.year = "n.d.");
+    switch (getCurrentTab("index")) {
+        case "1":
+            b = "" == a.edition ? a.author + " (" + a.year + ") <i>" + a.title + "</i>, " + a.place + ": " + a.pubname + "." : a.author + " (" + a.year + ") <i>" + a.title + "</i>, " + a.edition + " edn., " + a.place + ": " + a.pubname + ".";
+            break;
+        case "2":
+            b = "" == a.collection ? a.author + " (" + a.year + ") <i>" + a.title + ". </i>[Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ")." : a.author + " (" + a.year + ") <i>" + a.title + ". " + a.collection + "</i> [Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ").";
+            break;
+        case "3":
+            b = a.chapterauthor + " (" + a.year + ") '" + a.chapter + "', in " + a.bookauthor + " (ed.) <i>" + a.title + ". </i>" + a.place + ": " + a.pubname + ", pp. " + a.page + ".";
+            break;
+        case "4":
+            b = a.author + " (" + a.year + ") '" + a.title + "', <i>" + a.journaltitle + ", </i>" + a.volume + "(" + a.issuenum + "), pp. " + a.page + ".";
+            break;
+        case "5":
+            b = a.author + " (" + a.year + ") '" + a.title + "', <i>" + a.journaltitle + ", </i>" + a.volume + "(" + a.issuenum + "), pp. " + a.page + " [Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ").";
+            break;
+        case "6":
+            b = a.author + " (" + a.lastupdated + ") <i>" + a.title + ", </i>Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ").";
+            break;
+        case "7":
+            b = a.author + " (" + a.year + ") '" + a.title + "', <i>" + a.newspapertitle + ", </i>" + a.day + " " + a.month + ", p. " + a.page + ".";
+            break;
+        case "8":
+            b = a.author + " (" + a.year + ") <i>" + a.title + "</i>, " + a.place + ": " + a.pubname + ".";
+            break;
+        default:
+            alert("error")
+    }
+    return b
+}
+$(initRef());</script>
+</body>
+
+<!-- Mirrored from www.qub.ac.uk/cite2write/harvard3l.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Dec 2020 18:54:55 GMT -->
+</html>
+<!-- This document saved from http://www.qub.ac.uk/cite2write/harvard3l.html -->
