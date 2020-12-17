@@ -400,9 +400,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <p class="box titlebox"> Title<br><input type="text" class="title"></p>
 
-                    <p class="box editionbox"> Edition<br><input type="text" class="edition"></p>
+                    <p class="box editionbox"> Name of Conference<br><input type="text" class="edition"></p>
 
-                    <p class="box"> Pages<br><input type="text" class="place"></p>
+                    <p class="box"> Pages<br><input type="text" class="page"></p>
 
                     <p class="box"> Name of publisher<br><input type="text" class="pubname"></p></div>
                 <div id="4" class="panel"><h2 class="title">Thesis/Report<br></h2>
@@ -521,7 +521,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             b = "" == a.collection ? a.author + " (" + a.year + ") <i>" + a.title + ". </i>[Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ")." : a.author+  ". "  + a.title + ".\" In <i>" + a.edition + "</i>, " + "pp. " +a.page + ". " + a.pubname + ", " + a.year +"." 
             break;
         case "3":
-            b = a.chapterauthor + " (" + a.year + ") '" + a.chapter + "', in " + a.bookauthor + " (ed.) <i>" + a.title + ". </i>" + a.place + ": " + a.pubname + ", pp. " + a.page + ".";
+            b = "" == a.collection ? a.author + " (" + a.year + ") <i>" + a.title + ". </i>[Online]. Available at: <i><u>" + a.url + "</u></i> (Accessed: " + a.accessed + ")." : a.author+  ". "  + a.title + ".\" In <i>" + a.edition + "</i>, " + "pp. " +a.page + ". " + a.pubname + ", " + a.year +"." 
             break;
         case "4":
             b = a.author + " (" + a.year + ") '" + a.title + "', <i>" + a.journaltitle + ", </i>" + a.volume + "(" + a.issuenum + "), pp. " + a.page + ".";
